@@ -39,7 +39,7 @@ public class JpaMain {
             findMember.setName("HelloJPA");
 */
             //JPQL
-            List<Member> result = em.createQuery("select m from Member as m", Member.class)
+/*            List<Member> result = em.createQuery("select m from Member as m", Member.class)
                     .setFirstResult(5) //paging
                     .setMaxResults(8)
                     .getResultList();
@@ -47,7 +47,16 @@ public class JpaMain {
             for (Member member : result) {
                 System.out.println("member = " + member.getName());
             }
+*/
+            //비영속
+            Member member = new Member();
+            member.setId(100L);
+            member.setName("HelloJPA");
 
+            //영속
+            System.out.println("=== BEFORE ===");
+            em.persist(member);
+            System.out.println("=== AFTER ===");
 
             //변경(반영)을 하려면 commit 꼭 필요
             tx.commit();
