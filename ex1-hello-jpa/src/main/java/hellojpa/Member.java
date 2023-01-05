@@ -6,7 +6,14 @@ public class Member {
     @Id
     private Long id;
     private String name;
-//Getter, Setter …
+
+    
+    public Member (){}
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    //Getter, Setter …
 
     public Long getId() {
         return id;
