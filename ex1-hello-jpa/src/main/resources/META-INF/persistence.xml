@@ -23,7 +23,9 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
-            <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
+            <!-- 데이터베이스 스키마 자동 생성 -속성(여러 속성이 있음) 운영, 스테이징에는 가능한 쓰지말자 개인 로컬에서만 가능한 사용 -->
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+
         </properties>
     </persistence-unit>
 </persistence>
