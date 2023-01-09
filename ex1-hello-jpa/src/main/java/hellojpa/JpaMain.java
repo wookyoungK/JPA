@@ -48,17 +48,14 @@ public class JpaMain {
                 System.out.println("member = " + member.getName());
             }
 */
-            //영속
+/*            //영속
             Member member = em.find(Member.class, 150L);
             member.setName("ZZZZZZ");
-            //바로 데이터 변경 JPA는 변경 시점에 변경 감지를 통해서 엔티티와 스냅샷을 비교해
-            //flush(변경감지를하고 쓰기지연 SQL 저장소에서 등록) -> 변경 -> commit을 해준다.
-
-
-            // JAVA 컬렉션 다루듯 객체를 다루는것이 JPA의 목적
-            //em.persist(member)를 다시 호출할 필요가 없다.
-            System.out.println("====================");
-
+            바로 데이터 변경 JPA는 변경 시점에 변경 감지를 통해서 엔티티와 스냅샷을 비교해
+            flush(변경감지를하고 쓰기지연 SQL 저장소에서 등록) -> 변경 -> commit을 해준다.
+            JAVA 컬렉션 다루듯 객체를 다루는것이 JPA의 목적
+            em.persist(member)를 다시 호출할 필요가 없다.
+*/
 
 
             //변경(반영)을 하려면 commit 꼭 필요
