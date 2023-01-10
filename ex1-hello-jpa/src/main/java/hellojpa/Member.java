@@ -9,7 +9,7 @@ import java.util.Date;
 @SequenceGenerator(
         name = "MEMBER_SEQ_GENERATOR",
         sequenceName = "MEMBER_SEQ", //매핑할 데이터베이스 시퀀스 이름
-        initialValue = 1, allocationSize = 1)
+        initialValue = 1, allocationSize = 50) // 미리 DB에 50개를 올려놓고 메모리를 하나씩쓰는것 -> 미리 올려두고 사용하는 방법
 public class Member {
     //    @Column(nullable = false, length = 10) 실행로직에 영향을 주지않는다 -> DDL생성 기능
     @Id
