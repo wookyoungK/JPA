@@ -56,7 +56,14 @@ public class JpaMain {
             JAVA 컬렉션 다루듯 객체를 다루는것이 JPA의 목적
             em.persist(member)를 다시 호출할 필요가 없다.
 */
+            Member member = new Member();
+//            member.setId("ID_A");
+            member.setUsername("C");
+            System.out.println("============");
+            System.out.println("member = " + member.getId());
+            System.out.println("============");
 
+            em.persist(member);
 
             //변경(반영)을 하려면 commit 꼭 필요
             tx.commit();
