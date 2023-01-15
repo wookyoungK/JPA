@@ -16,7 +16,7 @@ public class Member {
 
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    private Team team;//진짜 매핑 - 연관관계의 주인(Member.team)
 
     public Long getId() {
         return id;
