@@ -15,8 +15,10 @@ public class Team {
     }
     @OneToMany(mappedBy = "team") //가짜 매핑 - 주인의 반대편(Team.members)
     private List<Member> members = new ArrayList<>();
-
-
+    public void addMember(Member member) {
+        member.setTeam(this);
+        members.add(member);
+    }
     public void setId(Long id) {
         this.id = id;
     }
