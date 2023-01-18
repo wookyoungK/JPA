@@ -27,6 +27,13 @@ public class JpaMain {
 
             Member member = em.find(Member.class, memberId);
 */
+            //양방향도 좋지만 단방향이 가능하다면 단방향으로 지향!
+            Order order = new Order();
+            em.persist(order);
+            
+            OrderItem orderItem = new OrderItem();
+            orderItem.setOrder(order);
+            em.persist(orderItem);
 
 
         }catch ( Exception e){
