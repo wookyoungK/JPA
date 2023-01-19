@@ -12,7 +12,7 @@ public class Member {
     * 가능한 생성자에서 값을 셋팅해주고 셋터의 기능을 최소화 하는 것이 좋다 여기저기서 setter를 사용하면 추적에도 안좋다
     * */
     @Id @GeneratedValue
-    @Column(name = "MBMBER_ID")
+    @Column(name = "MEMBER_ID")
     private Long id;
     private String name;
     private String city;
