@@ -24,6 +24,9 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    @OneToOne
+    @JoinColumn(name = "DELIVERY_ID")
+    private Delivery delivery;
 /*
     계속 참조해서 가져오도록 설계해야한다.
     private Member meber;
