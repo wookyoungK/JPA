@@ -20,10 +20,6 @@ public class Member {
     @Column(name = "name", nullable = false)
     private String username;
 
-    @OneToOne
-    @JoinColumn(name = "LOCKER_ID")
-    private Locker locker;
-
     public Long getId() {
         return id;
     }
