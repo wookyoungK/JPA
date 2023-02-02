@@ -1,5 +1,7 @@
 package jpaship;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Member {
@@ -14,6 +16,12 @@ public class Member {
 //    @Column(name = "TEAM_ID")
 //    private Long teamId;
 
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker locker;
+
+    @OneToMany(mappedBy = "member")
+    private List<MemberProduct> memberProducts = new ArrayList<>();
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
     private Team team;//진짜 매핑 - 연관관계의 주인(Member.team)
