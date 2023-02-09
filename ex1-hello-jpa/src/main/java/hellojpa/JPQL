@@ -13,3 +13,4 @@ JPQL
     • SQL을 추상화해서 특정 데이터베이스 SQL에 의존X -> 어떤 DB로 바꾸어도 자동 변환 적용가능(persistence.xml) 장점
     • JPQL을 한마디로 정의하면 객체 지향 SQL
     • JPQL은 뒤에서 아주 자세히 다룸
+    • git remote test && local branch test
